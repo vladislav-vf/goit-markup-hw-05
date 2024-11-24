@@ -26,7 +26,19 @@ p{
     
 }
 
-.visually-hidden:not(:focus):not(:active) {
+/* .visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+} */
+.visually-hidden{
     position: absolute;
     width: 1px;
     height: 1px;
@@ -562,9 +574,6 @@ color: #ffffff;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form{
-    
-}
 .modal-form-field{
     margin-bottom: 8px;
 }
@@ -619,7 +628,7 @@ color: #ffffff;
     font-size: 12px;
     line-height: 1.17; 
     letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
+    color: #2e2f4266;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
@@ -631,13 +640,23 @@ color: #ffffff;
 .modal-form-text:focus{
     border-color: #4D5AE5;
 }
-.placeholder{
+.modal-form-placeholder{
     margin-bottom: 16px
 }
-.modal-form-chek{
+.modal-form-text::placeholder{
+    color: #2E2F4266;
+}
+input[type='checkbox']:checked+
+ .modal-form-privacy-text
+  .modal-form-span{
+    background-color:#404bbf;
+    border: none;
+    fill:#f4f4fd
+  }
+.modal-form-privacy{
     margin-bottom: 24px
 }
-.modal-form-privacy{
+.modal-form-privacy-text{
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -657,12 +676,16 @@ color: #ffffff;
     fill: transparent;
 
 }
+
 .link-privacy-policy{
     color: #4d5ae5;
-
+    line-height: 1.33333;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    
 }
 .modal-button{
-    display: flex;
-    justify-content: center;
+    display: block;
+    margin: auto;
 }
 /* #endregion */
