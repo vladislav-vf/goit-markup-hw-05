@@ -640,7 +640,7 @@ color: #ffffff;
 .modal-form-text:focus{
     border-color: #4D5AE5;
 }
-.modal-form-placeholder{
+.modal-form-comment{
     margin-bottom: 16px
 }
 .modal-form-text::placeholder{
